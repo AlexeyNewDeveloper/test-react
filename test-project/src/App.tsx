@@ -59,12 +59,12 @@ const oneTapButton = Connect.buttonOneTapAuth({
 });
 
 // Получить iframe можно с помощью метода getFrame()
-// if (oneTapButton) {
-//   const iframeVK = oneTapButton.getFrame();
-//   if (iframeVK) {
-//     document.body.appendChild(iframeVK);
-//   }
-// }
+if (oneTapButton) {
+  const iframeVK = oneTapButton.getFrame();
+  if (iframeVK) {
+    document.body.appendChild(iframeVK);
+  }
+}
 
 // Удалить iframe можно с помощью OneTapButton.destroy();
 
