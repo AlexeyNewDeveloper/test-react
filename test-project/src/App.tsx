@@ -4,12 +4,12 @@ import './App.css';
 import { Config, Connect, ConnectEvents } from '@vkontakte/superappkit';
 import { createPortal } from 'react-dom';
 
-Config.init({
-  appId: 51762269, // идентификатор приложения
-});
 // Config.init({
-//   appId: 51761824, // идентификатор приложения
+//   appId: 51762269, // идентификатор приложения
 // });
+Config.init({
+  appId: 51761824, // идентификатор приложения
+});
 
 const oneTapButton = Connect.buttonOneTapAuth({
   // Обязательный параметр в который нужно добавить обработчик событий приходящих из SDK
@@ -38,12 +38,12 @@ const oneTapButton = Connect.buttonOneTapAuth({
       // state - состояние вашего приложение или любая произвольная строка, которая будет добавлена к url после авторизации.
       // Пользователь перешел по кнопке "Войти другим способом"
       case ConnectEvents.ButtonOneTapAuthEventsSDK.SHOW_LOGIN_OPTIONS: // = 'VKSDKButtonOneTapAuthShowLoginOptions'
-        // Параметр screen: phone позволяет сразу открыть окно ввода телефона в VK ID
-        // Параметр url: ссылка для перехода после авторизации. Должен иметь https схему. Обязательный параметр.
-        return Connect.redirectAuth({
-          screen: 'phone',
-          url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
-        });
+      // Параметр screen: phone позволяет сразу открыть окно ввода телефона в VK ID
+      // Параметр url: ссылка для перехода после авторизации. Должен иметь https схему. Обязательный параметр.
+      // return Connect.redirectAuth({
+      //   screen: 'phone',
+      //   url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
+      // });
     }
 
     return false;
