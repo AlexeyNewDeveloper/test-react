@@ -34,17 +34,11 @@ const oneTapButton = Connect.buttonOneTapAuth({
         break; // = 'VKSDKOneTapAuthPhoneValidationNeeded'
       case ConnectEvents.ButtonOneTapAuthEventsSDK.SHOW_LOGIN: // = 'VKSDKButtonOneTapAuthShowLogin'
         console.log('SHOW_LOGIN');
-        // Connect.redirectAuth({
-        //   url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
-        //   state: 'dj29fnsadjsd82',
-        // });
-        console.log(
-          Connect.redirectAuth({
-            url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
-            state: 'dj29fnsadjsd82',
-          })
-        );
-        console.log(window.location.href);
+        Connect.redirectAuth({
+          url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
+          state: 'dj29fnsadjsd82',
+        });
+
         break;
       // return Connect.redirectAuth({
       //   url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
@@ -91,6 +85,7 @@ if (oneTapButton) {
 // const iframeVK = oneTapButton?.getFrame();
 
 function App() {
+  console.log(window.location.href);
   return (
     <div className='App'>
       <header className='App-header'></header>
