@@ -34,6 +34,10 @@ const oneTapButton = Connect.buttonOneTapAuth({
         break; // = 'VKSDKOneTapAuthPhoneValidationNeeded'
       case ConnectEvents.ButtonOneTapAuthEventsSDK.SHOW_LOGIN: // = 'VKSDKButtonOneTapAuthShowLogin'
         console.log('SHOW_LOGIN');
+        return Connect.redirectAuth({
+          url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
+          state: 'dj29fnsadjsd82',
+        });
         break;
       // return Connect.redirectAuth({
       //   url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
