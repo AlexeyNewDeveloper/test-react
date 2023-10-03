@@ -84,9 +84,12 @@ if (oneTapButton) {
 // const iframeVK = oneTapButton?.getFrame();
 
 function App() {
-  // console.log(window.location.href);
   const query = window.location.href.split('?')[1];
-  console.log(qs.parse(query));
+  const qsParseQuery = qs.parse(query);
+  if (qsParseQuery.payload && typeof qsParseQuery.payload === 'string') {
+    console.log(JSON.parse(qsParseQuery.payload));
+  }
+
   return (
     <div className='App'>
       <header className='App-header'></header>
