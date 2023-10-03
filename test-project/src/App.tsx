@@ -26,10 +26,14 @@ const oneTapButton = Connect.buttonOneTapAuth({
         return false;
       // Для этих событий нужно открыть полноценный VK ID чтобы
       // пользователь дорегистрировался или подтвердил телефон
-      case ConnectEvents.OneTapAuthEventsSDK.FULL_AUTH_NEEDED: //  = 'VKSDKOneTapAuthFullAuthNeeded'
-      case ConnectEvents.OneTapAuthEventsSDK.PHONE_VALIDATION_NEEDED: // = 'VKSDKOneTapAuthPhoneValidationNeeded'
+      case ConnectEvents.OneTapAuthEventsSDK.FULL_AUTH_NEEDED:
+        console.log('FULL_AUTH_NEEDED');
+        break; //  = 'VKSDKOneTapAuthFullAuthNeeded'
+      case ConnectEvents.OneTapAuthEventsSDK.PHONE_VALIDATION_NEEDED:
+        console.log('PHONE_VALIDATION_NEEDED');
+        break; // = 'VKSDKOneTapAuthPhoneValidationNeeded'
       case ConnectEvents.ButtonOneTapAuthEventsSDK.SHOW_LOGIN: // = 'VKSDKButtonOneTapAuthShowLogin'
-        console.log('kek');
+        console.log('SHOW_LOGIN');
         break;
       // return Connect.redirectAuth({
       //   url: 'https://alexeynewdeveloper.github.io/test-react/test-project/build/index.html',
