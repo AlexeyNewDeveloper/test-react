@@ -1,8 +1,7 @@
-import React, { ReactNode, ReactPortal } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { Config, Connect, ConnectEvents } from '@vkontakte/superappkit';
-import { createPortal } from 'react-dom';
+import * as qs from 'qs';
 
 // Config.init({
 //   appId: 51762269, // идентификатор приложения
@@ -85,7 +84,9 @@ if (oneTapButton) {
 // const iframeVK = oneTapButton?.getFrame();
 
 function App() {
-  console.log(window.location.href);
+  // console.log(window.location.href);
+  const query = window.location.href.split('?')[1];
+  console.log(qs.parse(query));
   return (
     <div className='App'>
       <header className='App-header'></header>
