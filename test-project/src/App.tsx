@@ -5,7 +5,7 @@ import { Config, Connect, ConnectEvents } from '@vkontakte/superappkit';
 import { createPortal } from 'react-dom';
 
 Config.init({
-  appId: 51761824, // идентификатор приложения
+  appId: 51762269, // идентификатор приложения
 });
 
 const oneTapButton = Connect.buttonOneTapAuth({
