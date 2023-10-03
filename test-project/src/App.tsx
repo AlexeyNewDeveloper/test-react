@@ -7,6 +7,9 @@ import { createPortal } from 'react-dom';
 Config.init({
   appId: 51762269, // идентификатор приложения
 });
+// Config.init({
+//   appId: 51761824, // идентификатор приложения
+// });
 
 const oneTapButton = Connect.buttonOneTapAuth({
   // Обязательный параметр в который нужно добавить обработчик событий приходящих из SDK
